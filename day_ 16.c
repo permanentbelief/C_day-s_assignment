@@ -119,7 +119,84 @@
 //	printf("%d",my_strcmp(arr1, arr2));
 //	system("pause");
 //}
-void* my_memcpy(const char* dst, const char* src)
+//
+//void *Memmove(void *dst, const void *src, size_t size)
+//{
+//	char *psrc;
+//	char *pdst;
+//
+//	if (NULL == dst || NULL == src)
+//	{
+//		return NULL;
+//	}
+//	
+//	if ((src < dst) && (char *)src + size >(char *)dst) // 自后向前拷贝
+//	{                       //指针所指向scr的位置+size的大小 在dst指针的下面
+//		psrc = (char *)src + size - 1;
+//		pdst = (char *)dst + size - 1;
+//		while (size--)
+//		{
+//			*pdst-- = *psrc--;
+//		}
+//	}
+//	else
+//	{
+//		psrc = (char *)src;
+//		pdst = (char *)dst;
+//		while (size--)
+//		{
+//			*pdst++ = *psrc++;
+//		}
+//	}
+//
+//	return dst;
+//}
+//int main()
+//{
+//	char arr1[] = "Ilove";
+//	char arr2[] = "AB";
+//	printf("%s", my_memcpy(arr1, arr2, 1));
+//	system("pause");
+//}
+//方法二。
+//void* my_memcpy(void* dst, const void* src, size_t n)
+//{
+//	char *tmp = (char*)dst;
+//	char *s_src = (char*)src;
+//
+//	while (n--) {
+//		*tmp++ = *s_src++;
+//	}
+//	return dst;
+//}
+////char* 类型的memcpy
+////char* my_memcpy(char *dst, const char* src,size_t n)
+////{
+////	assert(dst&&src);
+////	char *ret = dst;
+////	while (*dst++);
+////	--dst;
+////	for (int i = 0; i<n; i++)
+////	{
+////		*dst = *src;
+////		dst++;
+////		src++;
+////		*dst = '\0';
+////	}
+////	return ret;
+////}
+//int main()
+//{
+//	char arr1[] = "Ilove";
+//	char arr2[] = "AB";
+//	printf("%s", my_memcpy(arr1, arr2, 1));
+//	system("pause");
+//}
+void *my_memmove(void*dst, const void *src, size_t n)
 {
+	char * s_dst = (char*)dst;
+	char * s_src = (char*)src;
+
+
 
 }
